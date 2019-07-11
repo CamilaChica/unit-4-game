@@ -8,6 +8,7 @@ background-image: url("../images/background4.jpg" );
 background-size: 100%;
 }
 
+
 h1 {
     font-family: 'Mountains of Christmas', cursive;
     color: rgb(255, 0, 128);
@@ -84,6 +85,11 @@ footer {
     bottom: 0;
   }
 
+  img:hover
+  {
+      width:155px!important;
+      height:150px!important;
+  }
 
 .col-lg-12 {
 

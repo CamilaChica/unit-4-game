@@ -4,13 +4,13 @@
 body {
 margin: 0px;
 padding: 0px;
-background-image: url("../images/background2.gif" );
+background-image: url("../images/background4.jpg" );
 background-size: 100%;
 }
 
 h1 {
     font-family: 'Mountains of Christmas', cursive;
-    color: rgb(80, 60, 196);
+    color: rgb(255, 0, 128);
     text-align: center;
     width: 100%; 
     font-size: 50px;

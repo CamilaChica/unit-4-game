@@ -25,7 +25,7 @@
     var randomNumber = Math.floor(Math.random() * 10) + 1; 
     
 	console.log("Crystal " + crystalNumber + ": " + randomNumber); 
-    $("#image" + crystalNumber).html("<img src=" + "assets/images/image" + crystalNumber + ".gif" + " value="+randomNumber+ ' style="width:200px;height:200px;"' + "/>");
+    $("#image" + crystalNumber).html("<img src=" + "assets/images/image" + crystalNumber + ".gif" + " value="+randomNumber+ ' style="width:150px;height:150px;"' + "/>");
     }
 
 

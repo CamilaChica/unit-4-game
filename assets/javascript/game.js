@@ -48,15 +48,19 @@
 	$(".scoreDisplay").html(newScore); 
 
 	if(newScore === matchNumber) { 
-	wins++ ; 
-	$(".wins").html("Wins: " + wins); 
+	wins++ ;
+	$(".loser").html(""); 
+	$(".winner").html("You WON!");
+	$(".wins").html("<b>WINS:</b> " + wins); 
 	console.log("Wins: " + wins); 
 	reset(); 
 	} 
 
 	else if(newScore > matchNumber) {
-	losses++ ; 
-	$(".losses").html("Losses: " + losses); 
+	losses++ ;
+	$(".winner").html("");
+	$(".loser").html("You LOST!");
+	$(".losses").html("<b>LOSSES:</b> " + losses); 
 	console.log("Losses: " + losses); 
 	reset(); 
 	}

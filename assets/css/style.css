@@ -67,6 +67,10 @@ h1 {
     color: rgb(105, 6, 129);
     
   }
+  .winner, .loser {
+    padding: 2%;
+    color: rgb(236, 2, 178);
+  }
 
 footer {
     text-align: center;

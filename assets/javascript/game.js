@@ -1,67 +1,65 @@
+    $(document).ready(function() {
+
+	var matchNumber = Math.floor(Math.random() * 100)+24; 
+		console.log("matchNumber: " + matchNumber); 
+        $(".randomNumber").html(matchNumber); 
+    
+
+    generateCrystalNumber(1);
+    generateCrystalNumber(2);
+    generateCrystalNumber(3);
+    generateCrystalNumber(4);
+		
+	var wins = 0; 
+		console.log("wins: " + wins); 
+
+	var losses = 0; 
+		console.log("losses: " + losses); 
+
+	var score = 0; 
+        console.log("score: " + score); 
+        
+    reset();
+
+    function generateCrystalNumber(crystalNumber) {
+    var randomNumber = Math.floor(Math.random() * 10) + 1; 
+    
+	console.log("Crystal " + crystalNumber + ": " + randomNumber); 
+    $("#image" + crystalNumber).html("<img src=" + "assets/images/image" + crystalNumber + ".gif" + " value="+randomNumber+ ' style="width:200px;height:200px;"' + "/>");
+    }
 
 
-            var options = ["r", "p", "s",];
-            var words = ["constellation", "asteroid", "comet", "astronaut"]
-            var wrongLetters =[]
-            var correctLetter =[]
-            var underScore =[]
-            var wins = 0;
-            var losses = 0;
-            var ties = 0;
-            var userGuess = 13;
-            $("#guessLeft").text(userGuess)
-            
-            var computerGuess = words[Math.floor(Math.random()*words.length)];
-            for (var i=0; i<computerGuess.length; i++){
-              underScore.push("__")
-            }
+	function reset () {
+	matchNumber = Math.floor(Math.random() * 100)+24; 
+	console.log("matchNumber: " + matchNumber); 
+	$(".randomNumber").html(matchNumber); 
 
-            /* join gives me a string with the items that the array has */
-            $("#sumWords").text(underScore.join(" "))
+	score = 0; 
+	$(".scoreDisplay").html(score); 
 
-            document.onkeyup = function() {
-              var userguess = String.fromCharCode(event.keyCode).
-              toLowerCase();
-      
-              console.log(userguess);
-      
-      
-              console.log(computerGuess);
-            
-              var index = computerGuess.indexOf(userguess);
-              if (index!=-1) {
-                correctLetter.push(userguess)
-                for (var i=0; i<computerGuess.length; i++)
-                  {
-                    if (computerGuess[i]===userguess){
-                      underScore[i]=userguess;
-                    }
-                  }
+	generateCrystalNumber(1);
+    generateCrystalNumber(2);
+    generateCrystalNumber(3);
+    generateCrystalNumber(4);
 
-                
-              }
-              else {
-                wrongLetters.push(userguess);
-                userGuess = userGuess - 1;
-              }
-              
-              $("#guessLeft").text(userGuess)
-              $("#sumWords").text(underScore.join(" "))
-              
-            
-              if (userGuess==0) {
-                alert("LOSER");
-                document.location.reload()
-              }
-              else {
-                for (var i=0; i<computerGuess.length; i++){
-                    if (correctLetter.indexOf(computerGuess[i])===-1){
-                      return 
-                    }
-                  }
-                  alert("YOU WON!");
-                  document.location.reload()
-              }
-          
-            }
-           
+	$("img").on("click", function () {
+	var newScore = score += parseInt($(this).attr("value")); 
+	console.log("New Score: " + newScore); 
+	$(".scoreDisplay").html(newScore); 
+
+	if(newScore === matchNumber) { 
+	wins++ ; 
+	$(".wins").html("Wins: " + wins); 
+	console.log("Wins: " + wins); 
+	reset(); 
+	} 
+
+	else if(newScore > matchNumber) {
+	losses++ ; 
+	$(".losses").html("Losses: " + losses); 
+	console.log("Losses: " + losses); 
+	reset(); 
+	}
+	}); 
+    }
+}); 

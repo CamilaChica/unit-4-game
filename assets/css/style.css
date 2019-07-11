@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+margin: 0px;
+padding: 0px;
+background-image: url("../images/background2.gif" );
+background-size: 100%;
+}
+
+h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    color: rgb(80, 60, 196);
+    text-align: center;
+    width: 100%; 
+    font-size: 50px;
+    padding: 30px;
+    margin: 0%;
+    }
+
+.instructions {
+    font-family: 'Libre Baskerville', serif;
+    color: rgb(16, 2, 37);
+    background-color: rgb(125, 227, 245); 
+	padding: 1%;
+	opacity: 0.8; 
+}
+
+.randomNumber {
+    font-family: 'Lobster', cursive, 'sans-serif';
+    color: rgb(236, 2, 178);
+	background-color: rgb(125, 227, 245); 
+	opacity: 0.8; 
+	padding: 2%;
+    font-size: 200%;
+    text-align: center;
+}
+
+.total { 
+    font-family: 'Lobster', cursive, 'sans-serif'; 
+	background-color: rgb(125, 227, 245); 
+    opacity: 0.8;
+    padding: 2%; 
+	}
+
+.totalScore {
+    font-family: 'Lobster', cursive, 'sans-serif';
+    color: rgb(16, 2, 37);
+ 	background-color: rgb(125, 227, 245); 
+    opacity: 0.8;
+    text-align: center;
+	}
+
+.scoreDisplay {
+ 	padding: 3%; 
+	background-color: rgb(125, 227, 245); 
+	opacity: 0.8; 
+	color: rgb(236, 2, 178);
+    font-size: 200%;
+    text-align: center;
+	font-family: 'Lobster', cursive, 'sans-serif'; 
+ }
+
+
+.wins, .losses { 
+	padding: 2%;
+    color: rgb(105, 6, 129);
+    
+  }
+
+footer {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    background-color: #3c027e;
+    border-top-style: solid;
+    border-top-color: rgb(93, 42, 151);
+    border-top-width: 5px;
+    padding-top: 20px;
+    bottom: 0;
+  }
+
+
+.col-lg-12 {
+
+
+}
+.col-md-12 {
+
+
+}
+.col-12 {
+
+
+}
